@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="center-box">
+            <div class="group">
+                <input type="text" [(ngModel)]="url" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>URL</label>
+                <div class="validation-msg" *ngIf="wrongURL">Please enter a valid youtube url.</div>
+            </div>
+            <div class="progress-wrapper" *ngIf="started && !finished">
+                <div class="progress-bar" [style.background-color]="'#ff9e2c'" [style.width]="percentWidth + '%'">&nbsp;</div>
+                <div class="progress-bar-message">{{ bytesDone }} / {{ allBytes }} MB</div>
+            </div>
+            <div class="progress-wrapper" *ngIf="finished">
+                <div class="progress-bar" [style.background-color]="'#00cc00'" [style.width]="100 + '%'">&nbsp;</div>
+                <div class="progress-bar-message">{{ allBytes }} / {{ allBytes }} MB <span class="success">Video downloaded!</span></div>
+            </div>
+            <button type="button" class="btn download-btn" (click)="download(url)" [disabled]="started == true">
+                <span *ngIf="!started"><fa  name="download" ></fa> Download</span>
+                <span *ngIf="msg == 'Downloading is starting'">{{ msg }} {{ dots }}</span>
+                <span *ngIf="msg != 'Downloading is starting' && started">Video is downloading</span>
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>

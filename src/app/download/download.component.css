@@ -1,0 +1,100 @@
+.center-box {
+    margin: auto;
+    margin-top: 10%;
+    width: 30%;
+}
+
+.download-btn {
+    background: #1aa3ff;
+    width: 100%;
+}
+
+.download-btn:hover {
+    background: #33adff;
+}
+
+.download-btn:disabled {
+    background: #005c99;
+    cursor: not-allowed;
+}
+
+.download-btn:disabled:hover {
+    background: #005c99;
+    cursor: not-allowed;
+    bottom: 0;
+    box-shadow:0 0 0 0;
+}
+
+.group {
+    position:relative;
+    margin-bottom:45px;
+}
+
+input {
+    font-size:16px;
+    padding:10px 0 3px 0;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+
+input:focus {
+    outline:none;
+}
+
+label {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top:-20px;
+    font-size:14px;
+    color:#33adff;
+}
+
+.bar {
+    position:relative; display:block; width:300px;
+}
+
+.bar:before, .bar:after {
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background:#33adff;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+.progress-wrapper {
+    margin-bottom: 2%;
+    background-color: #bfbfbf;
+}
+
+.progress-bar {
+    border-radius: 2px;
+}
+
+.progress-bar-message {
+    background-color: white;
+}
+
+.success {
+    float: right;
+}
+
+.validation-msg {
+    color:#cc0000;
+}

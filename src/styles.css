@@ -1,0 +1,22 @@
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+.btn {
+    border: None;
+    border-radius: 2px;
+    padding: 11px;
+    color: white;
+    position: relative !important;
+}
+
+.btn:hover {
+    cursor: pointer;
+    bottom: 1px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.08);
+}
